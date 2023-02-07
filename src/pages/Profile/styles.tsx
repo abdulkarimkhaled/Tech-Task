@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         width: "100%",
         paddingTop: calcHeight(35),
         paddingBottom: calcHeight(10),
-        shadowColor: "#000",
+        shadowColor: colors.black,
         shadowOffset: {
             width: 0,
             height: 2,

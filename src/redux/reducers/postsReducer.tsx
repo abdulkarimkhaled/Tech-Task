@@ -1,24 +1,17 @@
 import Types from "../types";
 //initial state of this reducer
 const initialState = {
-  token: '',
+  posts: [],
 };
 
 //recieve state and edit the data based on the recieved action
-const postsReducer = (state = initialState, action: { type: string }) => {
+const postsReducer = (state = initialState, action: { type: string, payload: object }) => {
   switch (action.type) {
-    //save login data action
-    case Types.SAVE_LOGIN:
+    //save posts changes action
+    case Types.SAVE_POSTS:
       return {
         ...state,
-        token: 'logged',
-      };
-
-    //delete token action
-    case Types.DELETE_LOGIN:
-      return {
-        ...state,
-        token: '',
+        posts: action.payload,
       };
 
     default:

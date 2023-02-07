@@ -16,12 +16,9 @@ export const fonts = {
 
 export const colors = {
     white: "#fff",
-    red: 'red',
     mainColor: '#039be5',
     grey: 'grey',
-    lightGrey: '#5F6369',
     black: '#000000',
-    simpleGrey: '#3D4548',
     delete: '#EB5757',
     inputGrey: '#5F636930'
 }

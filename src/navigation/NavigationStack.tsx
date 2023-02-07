@@ -3,12 +3,13 @@
 import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
-  Home, Login, Post, Splash,
+  Login, Post, Splash,
 } from '../pages';
 import DrawerStack from './DrawerStack';
+import { RootStackParamList } from '../config/appTypes';
 
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 //add screen to navigation stack
 export default function NavigationStack() {

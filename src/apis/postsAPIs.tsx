@@ -14,7 +14,7 @@ export const PostsApi = createApi({
 
         //get all posts
         getPostsAPI: builder.query({
-            query: data => ({
+            query: () => ({
                 url: ApiConstants.POSTS,
                 method: 'GET',
             }),

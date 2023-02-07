@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { colors, fonts } from '../../../config/appStyles'
 import { calcHeight, calcWidth } from '../../../config/metrics'
 
@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         width: "100%",
         paddingTop: calcHeight(35),
         paddingBottom: calcHeight(22),
-        shadowColor: "#000",
+        shadowColor: colors.black,
         shadowOffset: {
             width: 0,
             height: 2,

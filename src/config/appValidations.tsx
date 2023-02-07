@@ -5,5 +5,3 @@
 export const upperFirstLetters = (text: string) => {
     return text?.split(' ').map((item) => item[0]?.toUpperCase() + item?.substring(1)).join(' ')
 }
-
-

@@ -9,20 +9,17 @@ import { useAddSinglePostMutation, useEditSinglePostMutation, useGetSinglsPostAP
 import styles from './styles';
 import Back from '../../icons/svgs/Back';
 import NavigationService from '../../navigation/NavigationService';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../config/appTypes';
 
-interface propsType {
-    id: number,
-}
 
-interface paramsType {
-    params: propsType;
-}
-
-interface routeType {
-    route: paramsType;
-}
-function Post(props: routeType) {
-    const { data } = useGetSinglsPostAPIQuery({ id: props?.route?.params?.id ? props.route.params.id : null })
+type PostScreenProps = NativeStackScreenProps<RootStackParamList, 'Post'>
+function Post(props: PostScreenProps) {
+    const { data } = useGetSinglsPostAPIQuery({
+        id: props?.route?.params?.id
+            ? props.route.params.id :
+            null
+    })
     const [postPost, postResult] = useAddSinglePostMutation()
     const [editPost, editResult] = useEditSinglePostMutation()
     const {
